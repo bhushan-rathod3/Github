@@ -14,6 +14,7 @@ class Solution:
                 cnt-=1
             if s[i+k] in vowels:
                 cnt+=1
-            max_v = max(max_v,cnt)
+            if cnt > max_v:
+                max_v = cnt
 
         return max_v
