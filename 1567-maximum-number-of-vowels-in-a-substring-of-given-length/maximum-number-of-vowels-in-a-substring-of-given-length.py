@@ -2,7 +2,7 @@ class Solution:
     def maxVowels(self, s: str, k: int) -> int:
         max_v = 0
         cnt = 0
-        vowels = set('aeiou')
+        vowels = "aeiou"
 
         for i in range(k):
             if s[i] in vowels:
