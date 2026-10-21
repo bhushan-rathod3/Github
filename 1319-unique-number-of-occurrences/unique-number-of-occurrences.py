@@ -3,12 +3,12 @@ class Solution:
         nums = {}
 
         for num in arr:
-            if num not in nums:
-                nums[num] = 1
             if num in nums:
                 nums[num] += 1
+            else:
+                nums[num] = 1
 
-        if (len(set(nums.values())) == len(nums.values())):
-            return True
-        
-        return False
+        val_cnt = len(nums.values())
+        set_cnt = len(set(nums.values()))
+
+        return val_cnt == set_cnt
